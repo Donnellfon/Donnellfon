@@ -7,16 +7,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 <script>
-		
+
 // Start of work: FD
-	
-window.onload = pageStart();
-	
-function pageStart(){
-	document.getElementById("webdes").addEventListener("onclick", webDesSelect);
-	document.getElementById("webdev").addEventListener("onclick", webDevSelect);
-	document.getElementById("appdev").addEventListener("onclick", appDevSelect);
-}
 
 function webDesSelect(){
 	document.getElementById("webdesinfo").style.display = "block";
@@ -33,7 +25,6 @@ function appDevSelect(){
 	document.getElementById("webdevinfo").style.display = "none";
 	document.getElementById("appdevinfo").style.display = "block";
 }
-	
 // End of work: FD
 
 </script>
@@ -43,6 +34,7 @@ function appDevSelect(){
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #5f6064;
+  height: auto;
 }
 
 ul {
@@ -51,22 +43,25 @@ ul {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  background-color: #96AAE1;
+  opacity: 100%;
 }
 
 li {
   float: right;
+  color: #314caf;
+  background-color: #acb8ed;
 }
 
 li a {
   display: block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: .5s ease;
 }
 
 li a:hover {
+  color: white;
   background-color: #314caf;
 }
 
@@ -74,7 +69,7 @@ li a:hover {
 
 #services {
   position: absolute;
-  top: 85px;
+  top: 150px;
   right: 10px;
   height: 250px;
   margin: 0px;
@@ -83,19 +78,23 @@ li a:hover {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
+  color: #314caf;
   background-color: #acb8ed;
+  border-radius: 10px;
 }
 .servicelist {
   font-family: 'Bodoni Moda', serif;
-  color: white;
   position: relative;
   text-align: center;
   height: 20px;
   width: 90%;
   margin: 15px 5px;
   padding: 15px 5px;
+  border-radius: 10px;
+  transition: .5s ease;
 }
 .servicelist:hover {
+  color: white;
   background-color: #314caf;
 }
 
@@ -106,9 +105,10 @@ li a:hover {
   width: 73%;
   padding: 10px;
   margin: 10px;
-  top: 0px;
-  color: white;
-  background-color: #314caf;
+  top: 10px;
+  color: #314caf;
+  background-color: #acb8ed;
+  border-radius: 10px;
 }
 #webdesinfo {
   display: block;
@@ -125,11 +125,12 @@ li a:hover {
 #footer {
   font-size: 0.7em;
   position: absolute;
-  height: 60px;
-  width: 100%;
+  height: 80px;
+  width: 99.2%;
   bottom: 0px;
+  left: 0px;
   padding: 0px 0px 0px 10px;
-  color: white;
+  color: #314caf;
   background-color: #acb8ed;
 }
 
@@ -155,6 +156,7 @@ li a:hover {
 </div>
 
 <!-- Start of work: FD -->
+
 <div id="content">
 
 	<div id="webdesinfo" class="infowindow">
@@ -170,10 +172,14 @@ li a:hover {
 		<p>This is where information on our app development services would be seen!</p>
 	</div>
 
+  <script>
+
+  </script>
+
 	<ul id="services">
-		<li id="webdes" class="servicelist">Web Design</li>
-		<li id="webdev" class="servicelist">Web Development</li>
-		<li id="appdev" class="servicelist">App Development</li>
+		<li id="webdes" class="servicelist" onclick="webDesSelect()">Web Design</li>
+		<li id="webdev" class="servicelist" onclick="webDevSelect()">Web Development</li>
+		<li id="appdev" class="servicelist" onclick="appDevSelect()">App Development</li>
 	</ul>
 </div>
 
