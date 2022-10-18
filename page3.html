@@ -1,7 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>LPU Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+<script>
+		
+// Start of work: FD
+	
+window.onload = pageStart();
+	
+function pageStart(){
+	document.getElementById("webdes").addEventListener("onclick", webDesSelect);
+	document.getElementById("webdev").addEventListener("onclick", webDevSelect);
+	document.getElementById("appdev").addEventListener("onclick", appDevSelect);
+}
+
+function webDesSelect(){
+	document.getElementById("webdesinfo").style.display = "block";
+	document.getElementById("webdevinfo").style.display = "none";
+	document.getElementById("appdevinfo").style.display = "none";
+}
+function webDevSelect(){
+	document.getElementById("webdesinfo").style.display = "none";
+	document.getElementById("webdevinfo").style.display = "block";
+	document.getElementById("appdevinfo").style.display = "none";
+}
+function appDevSelect(){
+	document.getElementById("webdesinfo").style.display = "none";
+	document.getElementById("webdevinfo").style.display = "none";
+	document.getElementById("appdevinfo").style.display = "block";
+}
+	
+// End of work: FD
+
+</script>
+
+<style>
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #5f6064;
+}
+
+ul {
+  font-family: 'Bodoni Moda', serif;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #96AAE1;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #314caf;
+}
+
+/* Start of work: FD */
+
+#services {
+  position: absolute;
+  top: 85px;
+  right: 10px;
+  height: 250px;
+  margin: 0px;
+  width: 20%;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #acb8ed;
+}
+.servicelist {
+  font-family: 'Bodoni Moda', serif;
+  color: white;
+  position: relative;
+  text-align: center;
+  height: 20px;
+  width: 90%;
+  margin: 15px 5px;
+  padding: 15px 5px;
+}
+.servicelist:hover {
+  background-color: #314caf;
+}
+
+.infowindow {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  height: 350px;
+  width: 73%;
+  padding: 10px;
+  margin: 10px;
+  top: 0px;
+  color: white;
+  background-color: #314caf;
+}
+#webdesinfo {
+  display: block;
+}
+#webdevinfo {
+  display: none;
+}
+#appdevinfo {
+  display: none;
+}
+
+/* End of work: FD */
+
+#footer {
+  font-size: 0.7em;
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  bottom: 0px;
+  padding: 0px 0px 0px 10px;
+  color: white;
+  background-color: #acb8ed;
+}
+
+</style>
+	
+<title>LPU Page 3</title>
 </head>
 <body>
 <div id="banner">
@@ -10,19 +144,46 @@
 	</div>
 	
 	<div id="navbar">
-		<a href="index.html">Who We Are</a>
-		<a href="page2.html">Our Clients</a>
-		<a href="page3.html">Our Services</a>
-		<a href="page4.html">Contacts</a>
-		<a href="page5.html">Work With Us</a>
+	<ul>
+		<li><a href="index.html">Who We Are</a></li>
+		<li><a href="page2.html">Our Clients</a></li>
+		<li><a href="page3.html">Our Services</a></li>
+		<li><a href="page4.html">Contacts</a></li>
+		<li><a href="page5.html">Work With Us</a></li>
+	</ul>
 	</div>
 </div>
 
+<!-- Start of work: FD -->
 <div id="content">
-	<h1>This is the Index Page</h1>
+
+	<div id="webdesinfo" class="infowindow">
+		<h3>Our Web Design Services</h3>
+		<p>This is where information on our web design services would be seen!</p>
+	</div>
+	<div id="webdevinfo" class="infowindow">
+		<h3>Our Web Development Services</h3>
+		<p>This is where information on our web development services would be seen!</p>
+	</div>
+	<div id="appdevinfo" class="infowindow">
+		<h3>Our App Development Services</h3>
+		<p>This is where information on our app development services would be seen!</p>
+	</div>
+
+	<ul id="services">
+		<li id="webdes" class="servicelist">Web Design</li>
+		<li id="webdev" class="servicelist">Web Development</li>
+		<li id="appdev" class="servicelist">App Development</li>
+	</ul>
 </div>
 
+<!-- End of work: FD -->
+
 <div id="footer">
+	<div id="contactdetails">
+		<p>email@email</p>
+		<p>Phone Number</p>
+	</div>
 	<div id="socials">
 	</div>
 </div>
