@@ -1,31 +1,178 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>LPU Home</title>
-</head>
-<body>
-<div id="banner">
-	<div id="logoarea">
-		<img src="aaa">
-	</div>
-	
-	<div id="navbar">
-		<a href="index.html">Who We Are</a>
-		<a href="page2.html">Our Clients</a>
-		<a href="page3.html">Our Services</a>
-		<a href="page4.html">Contacts</a>
-		<a href="page5.html">Work With Us</a>
-	</div>
-</div>
+    <head>
+        <meta name="viewport" content="with=device-width,intial-scale=1.0">
+        <title>Indexpage</title>
+        
+<link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-image: url("images/work.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size:1920px;
+        }
+        .logoarea{
+            position: top left;
+            margin: auto;
+            width: 50%;
+            border: none;
+            padding: 10px;
+        }
 
-<div id="content">
-	<h1>This is the Index Page</h1>
-</div>
+        .text-box{
+    width:90%;
+    color:#fff;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .text-box h1{
+    font-size: 62px;
+  }
+  .text-box p{
+    margin:10px 0 40px;
+    font-size: 35px;
+    color:#fff;
 
-<div id="footer">
-	<div id="socials">
-	</div>
-</div>
+  }
+  .contact-button{
+    display:inline-block;
+    text-decoration:none;
+    color:#314caf;
+    border:1px solid #fff;
+    padding: 12px 34px;
+    font-size:13px;
+    background: solid;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+ }
+ .contact-button:hover{
+    border:1px solid #314caf;
+    background:#fff;
+    transition: 1s;
 
-</body>
+ }
+ /*-------service-----*/
+
+.serviceswindow{
+    width:80;
+    margin:auto;
+    text-align:center;
+    padding-top:100px;
+
+}
+h1{
+    font-size:36px;
+    font-weight:600;}
+    
+p{
+    color: #314caf;
+    font-size:14px;
+    font-weight:300;
+    line-height:22px;
+    padding:10px;
+
+}
+.servicewindow{
+    margin: top 10%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.serviceswindow{
+
+border: 2px solid #acb8ed;
+background: #acb8ed;
+border-radius: 10px;
+}
+.servicelist{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    flex-basis: 31%;
+    background:#acb8ed;
+    border-radius:10px;
+    margin: bottom 2%;
+    padding:20px 12px;
+    box-sizing: border-box;
+}
+.h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+
+
+    </style>
+
+    </head>
+    <body>
+
+<section class ="header">
+
+
+   
+    
+    <nav>
+        <a href="index.html"><src="images/logo2.png"></a>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">Who We Are</a></li>
+		        <li><a href="page2.html">Our Clients</a></li>
+                <li><a href="page3.html">Our Services</a></li>
+		        <li><a href="page4.html">Contacts</a></li>
+		        <li><a href="page5.html">Work With Us</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <div class="text-box">
+        <h1>Ireland's Number One Web <br>Consultancy Firm</h1>
+        <p>Here to LPU</p>
+        <a href=""class="contact-button">LET US LPU</a>
+    </div>
+    <div class="logoarea">
+        <a href="index.html">
+            <img id="LPU_logo" src="LPU LOGO.png">
+    </div>
+</section>
+<!------ services----->
+
+<section class="serviceswindow">
+ <h1>Services We Offer</h1>
+ 
+
+ <div class ="servicelist">
+    <h3>User Experience </h3>
+    <p>We ensure that the user experience is of top quality.<br>
+    b</p>
+    </div>
+
+   <div class ="servicelist">
+    <h3> Web Design</h3> 
+    <p>details describing user experience</p>
+   </div>
+
+   <div class ="servicelist">
+    <h3>Speed and Quality</h3>
+    <p>details describing user experience</p>
+   </div>
+
+  
+
+
+   </div>
+   
+
+</section>
+
+    </body>
 </html>
