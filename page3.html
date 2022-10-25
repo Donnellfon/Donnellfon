@@ -36,6 +36,11 @@ function appDevSelect(){
 /* Start of work: FD */
 body {
   height: 700px;
+  width: auto;
+  background-image: url(contact.jpg);
+}
+h2 {
+  color: white;
 }
 
 #services {
@@ -53,6 +58,7 @@ body {
   background-color: #acb8ed;
   border-radius: 10px;
   border: 3px solid #5f6064;
+  opacity: 80%;
 }
 .servicelist {
   font-family: 'Bodoni Moda', serif;
@@ -70,6 +76,13 @@ body {
   background-color: #314caf;
 }
 
+dl {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin: 20px;
+}
+
 .infowindow {
   position: absolute;
   font-family: 'Poppins', sans-serif;
@@ -82,6 +95,7 @@ body {
   background-color: #acb8ed;
   border-radius: 10px;
   border: 3px solid #5f6064;
+  opacity: 80%;
 }
 #webdesinfo {
   display: block;
@@ -96,6 +110,7 @@ body {
   width: 320px;
   margin: 10px;
   float: right;
+  border: 3px solid #5f6064;
 }
 
 /* End of work: FD */
@@ -130,18 +145,39 @@ body {
 <div id="content">
 
 	<div id="webdesinfo" class="infowindow">
-		<h3>Our Web Design Services</h3>
+		<h2>Our Web Design Services</h2>
 		<p>This is where information on our web design services would be seen!</p>
+    <dl>
+      <dt><strong>Consistent Design</strong></dt>
+      <dd>Make your website simple for users to admire and appreciate with award-winning design.</dd>
+      <br/>
+      <dt><strong>Find your Public Image</strong></dt>
+      <dd>We work with you to ensure that your company and your website are looking their best.</dd>
+    </dl>
     <img class="servicepic1" src="webdesign1.jpg">
 	</div>
 	<div id="webdevinfo" class="infowindow">
-		<h3>Our Web Development Services</h3>
+		<h2>Our Web Development Services</h2>
 		<p>This is where information on our web development services would be seen!</p>
+    <dl>
+      <dt><strong>Search Engine Optimisation</strong></dt>
+      <dd>Good SEO provides long-term benefits for your site, ensuring it attracts more of the right audience.</dd>
+      <br/>
+      <dt><strong>Analytics</strong></dt>
+      <dd>We provide insight into what your target audience wants out of your site, so you can make better informed decisions.</dd>
+    </dl>
     <img class="servicepic1" src="webdevelopment1.jpg">
 	</div>
 	<div id="appdevinfo" class="infowindow">
-		<h3>Our App Development Services</h3>
+		<h2>Our App Development Services</h2>
 		<p>This is where information on our app development services would be seen!</p>
+    <dl>
+      <dt><strong>Responsive Design</strong></dt>
+      <dd>A responsive design is important for app development, as it accounts for the different devices the product will cater for.</dd>
+      <br/>
+      <dt><strong>Optimal Application Function</strong></dt>
+      <dd>Get the functionality you want from your app, while keeping it running fast for your users.</dd>
+    </dl>
     <img class="servicepic1" src="appdevelopment1.jpg">
 	</div>
 
