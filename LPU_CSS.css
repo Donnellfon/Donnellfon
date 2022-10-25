@@ -64,8 +64,6 @@ li a:hover {
 }
 
 #navbar {
-  border-top: 3px solid #5f6064;
-  border-bottom: 3px solid #5f6064;
   width: 50%;
   float: right;
 }
