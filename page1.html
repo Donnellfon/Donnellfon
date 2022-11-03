@@ -1,349 +1,280 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LPU Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>LPU Home</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="index.css">
+   <style>
+      #logoarea {
+        position: absolute;
+         margin: 0px;
+        float: left;
+        top: -30px;
+        height: 120px;
+        width: 140px;
+      }
+      #LPU_logo {
+        position: absolute;
+        left: -40px;
+        width: 220px;
+        z-index: 3;
+      }
+      #banner {
+        left: 0%;
+        top: 0%;
+        margin: 0px;
+        padding: 10px;
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        z-index: 3;
+      }
+      #navbar {
+        width: 50%;
+        float: right;
+      }
+      #navbar ul {
+        font-family: 'Bodoni Moda', serif;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        opacity: 100%;
+        bottom: 0%;
+        right: 0%;
+      }
+      #navbar li {
+        float: right;
+        color: #314caf;
+        background-color: #acb8ed;
+        bottom: 0%;
+        right: 0%;
+      }
+      #navbar li a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: .5s ease;
+      }
+      #navbar li a:hover {
+        color: white;
+        background-color: #314caf;
+      }
+      body {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: 100% 100%;
+        height: 1200px;
+        font-family: 'Poppins', sans-serif;
+      }
+      .hero-image {
+        background-image: url("Contact.jpg");
+        height: 80%;
+        width:100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+      .hero-text button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px 25px;
+        color: black;
+        background-color: white;
+        text-align: center;
+        cursor: pointer;
+      }
+      .hero-text button:hover {
+        background-color: #314CAF;
+        color: white;
+      }
+      .firstparagraph {
+        border: none;
+        padding:8% 15% 10% 15%;
+        color: black;
+        text-align: left;
+        line-height:1.8em
+      }
+      .collapsible {
+        background-color: white;
+        color:black;
+        padding: 30px;
+        width: 100%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 17px;
+      }
+      .active, .collapsible:hover {
+        background-color: #314CAF;
+        color: white;
+      }
+      .content {
+        padding:2% 15% 2% 15%;
+        display: none;
+        overflow: hidden;
+        background-color: #acb8ed; 
+      }
+      .container {
+        border-radius: 10px;
+        background-color: #acb8ed;
+        padding: 10px;
+        position:absolute;
+        bottom: 0px;
+        top: 250px;
+        right: 30px;
+        width: 600px;
+        height: 680px;
+        border-top: 3px solid #acb8ed;
+      }
+      .column {
+        float: left;
+        width: 70%;
+        margin-top: 6px;
+        padding: 20px;
+        color: #314CAF;
+      }
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      #footer {
+        font-size: 0.7em;
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        margin-top:10px;
+        padding: 0px 0px 0px 10px;
+        color: #314caf;
+        background-color: #acb8ed;
+      }
 
-<link rel="stylesheet" href="index.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <style>
-
-   ul {
-            font-family: 'Bodoni Moda', serif;
-            list-style-type: none;
-            margin: 0px;
-            padding: 0px;
-            overflow: hidden;
-            opacity: 100%;
-            bottom: 0%;
-            right: 0%;
-          }
-
-          li {
-            float: right;
-            color: #314caf;
-            background-color: #acb8ed;
-            bottom: 0%;
-            right: 0%;
-          }
-
-          li a {
-            display: block;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: .5s ease;
-          }
-
-          li a:hover {
-            color: white;
-            background-color: #314caf;
-          }
-
-         #logoarea {
-            position: absolute;
-            margin: 0px;
-            float: left;
-            top: -30px;
-            height: 120px;
-            width: 140px;
-          }
-
-         #LPU_logo {
-           position: absolute;
-           left: -40px;
-           width: 220px;
-           z-index: 3;
-        
-          }
-
-         #banner {
-           left: 0%;
-           top: 0%;
-           margin: 0px;
-           padding: 10px;
-           height: 100px;
-           width: 100%;
-           position: absolute;
-           z-index: 3;
-          }
-
-         #navbar {
-           
-           width: 50%;
-           float: right;
-           
-          }
-
-         body {
-           
-           background-image: none;
-           background-repeat: no-repeat;
-           background-attachment: scroll;
-           background-size: 100% 100%;
-           height: 1200px;
-           font-family: 'Poppins', sans-serif;
-      
-          }
-
-.hero-image {
-  background-image: url("Contact.jpg");
-  height: 80%;
-  width:100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: white;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #314CAF;
-  color: white;
-}
- 
-
- .firstparagraph {
-  border: none;
-  padding:5% 15%;
-  color: black;
-  text-align: left;
-}
- 
-.collapsible {
-  background-color: white;
-  color:black;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
- background-color: #314CAF;
- color: white;
-}
-
-.content {
-padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1; 
-}
- 
-
-  .container {
-            border-radius: 10px;
-            background-color: #acb8ed;
-            padding: 10px;
-            position:absolute;
-            bottom: 0px;
-            top: 250px;
-            right: 30px;
-            width: 600px;
-            height: 680px;
-            border-top: 3px solid #acb8ed;
-            
- 
-          }
-
-         .column {
-            float: left;
-            width: 70%;
-            margin-top: 6px;
-            padding: 20px;
-            color: #314CAF;
-          }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-          }
-          
-
-         .fa {
-            padding: 20px;
-            font-size: 30px;
-            width: 50px;
-            text-align: center;
-            text-decoration: none;
-          }
-
-         .fa-twitter {
-            background: #55ACEE;
-            color: white;
-            display: flex;
-            justify-content: center;
-         
-            left: 30%;
-            position: absolute;
-           
-          }
-
-         .fa-instagram {
-            background: #6a30b1;
-            color: white;
-            display: flex;
-            justify-content: center;
-            
-            left: 45%;
-            position: absolute;
-           
-
-          }
-
-         .fa-facebook {
-            background: #314CAF;
-            color: white;
-            display: flex;
-            justify-content: center;
-         
-            left: 60%;
-            position: absolute;
-            
-          }
-
-         #footer {
-
-            font-size: 0.7em;
-            position: absolute;
-            height: 100px;
-            width: 100%;
-            margin-top:100px;
-            left: 0px;
-            padding: 0px 0px 0px 10px;
-            color: #314caf;
-            background-color: #acb8ed;
-           
-          }
-
-
-   </style>
-
-
+  </style>
 </head>
+
 <body>
  
- <div id="banner">
-
-        <div id="navbar">
-          <ul>
-            <li><a href="index.html">Who We Are</a></li>
-            <li><a href="page2.html">Our Clients</a></li>
-            <li><a href="page3.html">Our Services</a></li>
-            <li><a href="page4.html">Contacts</a></li>
-            <li><a href="page5.html">Work With Us</a></li>
-          </ul>
-        </div>
+      <div id="banner">
+          <div id="navbar">
+             <ul>
+             <li><a href="index.html">Who We Are</a></li>
+             <li><a href="page2.html">Our Clients</a></li>
+             <li><a href="page3.html">Our Services</a></li>
+             <li><a href="page4.html">Contacts</a></li>
+             <li><a href="page5.html">Work With Us</a></li>
+             </ul>
+          </div>
     
-       <div id="logoarea">
-          <a href="index.html">
-            <img id="LPU_logo" src="LPU LOGO.png">
-          </a>
-       </div>
-        
-     </div>
+          <div id="logoarea">
+             <a href="index.html">
+                 <img id="LPU_logo" src="LPU LOGO.png">
+             </a>
+          </div>
+      </div>
 
 
+      <div class="hero-image">
+          <div class="hero-text">
+              <h1 style="font-size:50px">Ireland's NO.1 </br>Web Consultancy Firm</h1>
+              <br>
+              <button> <a href="page4.html">LET US LPU</a></button>
+          </div>
+      </div>
 
 
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">Ireland's Number One Web <br>Consultancy Firm</h1>
-    <br>
-   <button> <a href="page4.html">LET US LPU</a></button>
-  </div>
-</div>
+      <div class="firstparagraph">
+          <h1 style="text-align:left; color: #314CAF; font-size:45px">
+          Who We Are</h1></br>
+          <p style="text-align:left; font-size: 18px">
+          There was a time when economic growth, sustainability, and inclusion were seen as trade-offs, but leaders today need to achieve all three. This new paradigm of growth will be more sustainable, driving innovation while reducing environmental impact. It will also be more inclusive, creating access to opportunities for people worldwide.</p>
+          <p style="text-align:left; font-size: 18px">
+          This is not an easy task, but our ambition is to help organizations and their leaders make it a reality. Every day, around the world, we partner with our clients to set bold strategies, unlock the potential of their people, embed transformative technologies in everything they do, and innovate sustainably. The impact we deliver helps clients achieve enduring change in their capabilities and performance and speeds up the transition to sustainable and inclusive growth.</p>
+      </div>
 
-<div class="firstparagraph">
-  <h2 style="text-align:left;">Heading</h2>
-  <p style="text-align:left;">
-  There was a time when economic growth, sustainability, and inclusion were seen as trade-offs, but leaders today need to achieve all three. This new paradigm of growth will be more sustainable, driving innovation while reducing environmental impact. It will also be more inclusive, creating access to opportunities for people worldwide.
- </p>
-  <p style="text-align:left;">
-  This is not an easy task, but our ambition is to help organizations and their leaders make it a reality. Every day, around the world, we partner with our clients to set bold strategies, unlock the potential of their people, embed transformative technologies in everything they do, and innovate sustainably. The impact we deliver helps clients achieve enduring change in their capabilities and performance—and speeds up the transition to sustainable and inclusive growth.
-</p>
 
-</div>
+      <table style="width:100% border:1px solid black;  border-collapse:collapse">
+          <tr style="height:200px; background-color: white">
+
+              <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
+              <td style="width:30%; text-align:center; vertical-align:center; table-layout:fixed; padding-right:20px">
+                  <img src="ourvalue.jpg" style="width:100%"></td>
+              <td style="width:30%; padding-left:4%">
+                  <h2 style="text-align:left!important; color: #314CAF; font-size:30px">Our Values</h2></br>
+                  <p style="font-size:17px; color:black; text-align:left; line-height:1.7em">At Crowe our culture is one of our most valuable assets, it is part of our DNA. Our culture and values have guided our firm and the way we work since 1941.</br></br>
+                  Our values have helped create a dynamic company culture, built on lasting, fruitful relationships within the firm and with our clients resulting in great, impactful work.</p></td>
+              <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
+          </tr>
+      </table>
+
+      <button type="button" class="collapsible">See More</button>
+          <div class="content">
+              <ul style="list-style-type:square;">
+                  <li>Clarity</li>
+                      <p>With a full understanding of our clients' business and objectives, we can identify effective solutions quickly. By remaining open, transparent and straight-talking, among colleagues as well as with clients, we bridge the gap between challenge and response, between potential and opportunity. Clarity delivers results.</p>
+                  <li>Curiosity</li>
+                      <p>We are responsive to our clients' needs in an ever-changing business environment. But we're more than that, we're proactive. Our expert teams are continually devising ways to strengthen our clients' businesses and find new ways to overcome challenges and maximise efficiencies. Our agility makes us responsive and innovative.</p>
+                  <li>Curiosity</li>
+                      <p>Curiosity is part of what we are. We are compelled to find out more, whether it's about our clients, the issues they face or learning new ways of doing things better. Until we are convinced we have found the best solution, we will continue exploring the possibilities. Curiosity fuels our appetite for knowledge and our thirst for answers.</p>
+                  <li>Affinity</li>
+                      <p>The way we do business is driven by the way we interact with people. From the outset our priority is to get to know our clients, to understand what is important to them professionally and personally. Listening to one another and developing mutual understanding, ensures better results and more effective partnerships. Lasting relationships are built on an affinity and respect for each other.</p>
+               </ul>
+           </div>
+
+
 
 
 
 <table style="width:100% border:1px solid black;  border-collapse:collapse">
-   <tr style="height:200px; background-color: #5f6064">
+   <tr style="height:200px; background-color: white">
 
-      <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed"></th>
+      <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
     
-      <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed; padding-right:20px">
-         <img src="https://webdevproject2210.w3spaces.com/pexels_Hero_Image.jpg" style="width:100%">
-      </th>
+      <td style="width:30%; padding-right:20px">
+         <h2 style="text-align:left!important; color: #314CAF; font-size:30px">Our Teams</h2>
+         <p style="font-size:17px; color:black; text-align:left; line-height:1.7em">McKinsey is led globally by our managing partner; our elected board of directors, known as the Shareholders Council; a global leadership team known as the Acceleration Team; and the leaders of our offices and practices.</p>
+      </td>
+
+      <td style="width:30%; text-align:center; vertical-align:middle; table-layout:fixed; padding-left:4%">
+         <img src="ourteams.jpg" style="width:100%">
+      </td>
     
-      <th style="width:25%; padding-left:20px">
-         <h2 style="text-align:center!important; color:white">Column 2</h2>
-         <p style="font-size:16px; color:white; text-align:left">Established in 1941, Crowe is a leading accountancy and business advisory firm in Ireland and is part of the Crowe Global network. Over our history, we have developed an unrivaled understanding of the Irish business environment and built a national reputation in audit, tax and business consultancy.</p>
-     </th>
-
-     <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed"></th>
-   </tr>
-</table>
-
-<button type="button" class="collapsible">See More</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-
-<table style="width:100% border:1px solid black;  border-collapse:collapse">
-   <tr style="height:200px; background-color: #5f6064"">
-
-      <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed"></th>
-    
-      <th style="width:25%; padding-right:20px">
-         <h2 style="text-align:center!important; color:white">Column 2</h2>
-         <p style="font-size:16px; color:white; text-align:left">Established in 1941, Crowe is a leading accountancy and business advisory firm in Ireland and is part of the Crowe Global network. Over our history, we have developed an unrivaled understanding of the Irish business environment and built a national reputation in audit, tax and business consultancy.</p>
-      </th>
-
-      <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed; padding-left:20px">
-         <img src="https://webdevproject2210.w3spaces.com/pexels_Hero_Image.jpg" style="width:100%">
-      </th>
-    
-     <th style="width:25%; text-align:center; vertical-align:middle; table-layout:fixed"></th>
+     <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
    </tr>
 </table>
 
 
 <button type="button" class="collapsible">See More</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <ol>
+  <li>Shareholders Council</li>
+  <p>The Shareholders Council functions as our firm’s global board of directors, setting the strategic direction and policies of the firm. It includes the managing partner, plus 30 senior partners who are elected by their peers to serve three-year terms.</p>
+  <li>Acceleration Team</li>
+  <p>Our Acceleration Team is a global leadership body that accelerates the delivery of our client service and people mission. The team connects leaders of regions and key capabilities, such as People & Diversity, Risk & Resilience, and Finance, to support our firm’s performance and health.</p>
+  <li>Office Leadership</li>
+  <p>Our offices in more than 65 countries are led by a group of senior partners across six regions: Asia (ex-China), Greater China, Eastern Europe, Middle East & Africa, Europe, Latin America, and North America. Working closely with McKinsey location managers in more than 130 cities, these leaders ensure the best of our global firm reaches our local clients and communities.</p>
+  <li>Practice Leadership</li>
+  <p>Our practices serve clients across most capabilities and industries. The global leaders of each are responsible for delivering client impact, developing knowledge and capabilities, innovating, and developing our people. They work closely with regional leaders and many others to deliver positive, enduring change to our clients and stakeholders.</p>
+</ol>  
+
+
+ 
+
 </div>
+
+
 
 
 <script>
@@ -363,27 +294,7 @@ for (i = 0; i < coll.length; i++) {
 }
 </script>
 
-            
-  <a href="https://www.instagram.com/lpu.consultancy/" class="fa fa-instagram"></a>
-     <a href="https://twitter.com/LPU_consultancy" class="fa fa-twitter"></a>
-     <a href=" https://www.facebook.com/profile.php?id=100086911729024" class="fa fa-facebook"></a>
 
-
-
-     <div id="footer">
-        <div id="contactdetails">
-            <p>email@email</p>
-            <p>Phone Number</p>
-        </div>
-        <div id="socials">
-        </div>
-    </div>
-
-
-
-     <a href="https://www.instagram.com/lpu.consultancy/" class="fa fa-instagram"></a>
-     <a href="https://twitter.com/LPU_consultancy" class="fa fa-twitter"></a>
-     <a href=" https://www.facebook.com/profile.php?id=100086911729024" class="fa fa-facebook"></a>
 
      <div id="footer">
         <div id="contactdetails">
