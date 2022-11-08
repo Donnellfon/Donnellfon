@@ -71,14 +71,12 @@ li a:hover {
 /*Elements for footer*/
 #footer {
   font-size: 0.7em;
-  position: fixed;
+  position: relative;
   height: 70px;
-  width: 99.2%;
-  top: auto;
-  bottom: 0%;
+  width: auto;
+  top: 800px;
   left: 0px;
-  padding: 0px 0px 0px 10px;
-  color: #314caf;
+  padding: 0px 0px 0px 20px;
+  color: white;
   background-color: #acb8ed;
-  border-top: 3px solid #5f6064;
 }
