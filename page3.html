@@ -35,17 +35,18 @@ function appDevSelect(){
 
 /* Start of work: FD */
 body {
-  height: 700px;
+  height: 950px;
   width: auto;
   background-image: url(contact.jpg);
+  background-size: auto;
 }
 h2 {
-  color: white;
+  color: #314caf;
 }
 
 #services {
   position: absolute;
-  top: 150px;
+  top: 130px;
   right: 10px;
   height: 250px;
   margin: 0px;
@@ -54,11 +55,11 @@ h2 {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  color: #314caf;
-  background-color: #acb8ed;
+  color: #5f6064;
+  background-color: white;
   border-radius: 10px;
   border: 3px solid #5f6064;
-  opacity: 80%;
+  opacity: 90%;
 }
 .servicelist {
   font-family: 'Bodoni Moda', serif;
@@ -86,16 +87,16 @@ dl {
 .infowindow {
   position: absolute;
   font-family: 'Poppins', sans-serif;
-  height: 350px;
+  height: 400px;
   width: 73%;
   padding: 10px;
   margin: 10px;
   top: 120px;
-  color: #314caf;
-  background-color: #acb8ed;
+  color: #5f6064;
+  background-color: white;
   border-radius: 10px;
   border: 3px solid #5f6064;
-  opacity: 80%;
+  opacity: 90%;
 }
 #webdesinfo {
   display: block;
@@ -113,6 +114,64 @@ dl {
   border: 3px solid #5f6064;
 }
 
+#calculator {
+  position: absolute;
+  top: 550px;
+  left: 10px;
+  height: 350px;
+  margin: 10px;
+  width: 73%;
+  list-style-type: none;
+  padding: 10px;
+  overflow: hidden;
+  color: #5f6064;
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid #5f6064;
+  opacity: 90%;
+}
+#currency{
+  position: relative;
+}
+.deals{
+  font-family: 'Bodoni Moda', serif;
+  float: left;
+  text-align: center;
+  height: 80px;
+  width: 25%;
+  margin: 5px 30px;
+  padding: 15px 5px;
+  border-radius: 10px;
+  transition: .5s ease;
+  color: white;
+  background-color: #314caf;
+}
+#result{
+  position: absolute;
+  text-align:center;
+  bottom: 0px;
+  font-size: large;
+  color: black;
+  left: 37%;
+  background-color: #acb8ed;
+  padding: 10px;
+  height: 25px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+#footer {
+  font-size: 0.8em;
+  position: relative;
+  height: 70px;
+  width: auto;
+  top: 950px;
+  left: 0px;
+  padding: 0px 0px 0px 20px;
+  color: white;
+  background-color: #acb8ed;
+}
+
 /* End of work: FD */
 
 </style>
@@ -124,11 +183,11 @@ dl {
 
 	<div id="navbar">
 	<ul>
-		<li><a href="index.html">Who We Are</a></li>
-		<li><a href="page2.html">Our Clients</a></li>
-		<li><a href="page3.html">Our Services</a></li>
-		<li><a href="page4.html">Contacts</a></li>
 		<li><a href="page5.html">Work With Us</a></li>
+		<li><a href="page4.html">Contacts</a></li>
+		<li><a href="page3.html">Our Services</a></li>
+		<li><a href="page2.html">Our Clients</a></li>
+		<li><a href="index.html">Who We Are</a></li>
 	</ul>
   </div>
 
@@ -187,14 +246,107 @@ dl {
 		<li id="webdev" class="servicelist" onclick="webDevSelect()">Web Development</li>
 		<li id="appdev" class="servicelist" onclick="appDevSelect()">App Development</li>
 	</ul>
-</div>
+
+  <div id="calculator">
+    	<!--Start of work: FD-->
+		<h2>Quote Calculator</h2>
+		<label for="hoursAmount">Hours you'd like to work with us for:</label>
+		<input type="text" id="hoursAmount">
+		<br>
+		<br>
+    <label for="currency">Currency selected:</label>
+		<select name="currencies" id="currency">
+			<option value="dollars">US Dollars</option>
+			<option value="pounds">Pounds</option>
+			<option value="euros">Euros</option>
+		</select>
+		<br>
+		<br>
+		<div class="deals"><h3>Web Design Deal</h3><input type="button" id="quote1" value="Get Quote" onclick="getValues1()"></div>
+		<div class="deals"><h3>Web Development Deal</h3><input type="button" id="quote2" value="Get Quote" onclick="getValues2()"></div>
+		<div class="deals"><h3>App Development Deal</h3><input type="button" id="quote3" value="Get Quote" onclick="getValues3()"></div>
+		<br>
+		<br>
+		<p id="result"></p>
+
+
+		<!--End of work: FD-->
+
+		<script>
+			/* Start of work: FD */
+
+			var rate;
+			var sign;
+			var hoursInput;
+			var resultAmount;
+			rate = 0;
+			hoursInput = 0;
+			resultAmount = 0;
+			sign = "€";
+
+			function getValues1(){
+				hoursInput = document.getElementById("hoursAmount").value;
+
+				if (document.getElementById("currency").value == "dollars"){
+					rate = 9.00;
+					sign = "$";
+				}else if(document.getElementById("currency").value == "pounds"){
+					rate = 10.00;
+					sign = "£";
+				}else{
+					rate = 9.50;
+					sign = "€";
+				}
+
+				resultAmount = rate * hoursInput;
+
+				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+			}
+			function getValues2(){
+				hoursInput = document.getElementById("hoursAmount").value;
+
+				if (document.getElementById("currency").value == "dollars"){
+					rate = 19.00;
+					sign = "$";
+				}else if(document.getElementById("currency").value == "pounds"){
+					rate = 20.00;
+					sign = "£";
+				}else{
+					rate = 19.50;
+					sign = "€";
+				}
+
+				resultAmount = rate * hoursInput;
+
+				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+			}
+			function getValues3(){
+				hoursInput = document.getElementById("hoursAmount").value;
+
+				if (document.getElementById("currency").value == "dollars"){
+					rate = 29.00;
+					sign = "$";
+				}else if(document.getElementById("currency").value == "pounds"){
+					rate = 30.00;
+        }else{
+					rate = 29.50;
+					sign = "€";
+				}
+
+				resultAmount = rate * hoursInput;
+
+				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+      }
+			/* End of work: FD */
+		</script>
+  </div>
 
 <!-- End of work: FD -->
 
 <div id="footer">
 	<div id="contactdetails">
-		<p>email@email</p>
-		<p>Phone Number</p>
+		<p>info@lpuservices.ie</p>
+		<p>+353 (083) 877 3751</p>
 	</div>
 	<div id="socials">
 	</div>
