@@ -38,7 +38,8 @@ body {
   height: 950px;
   width: auto;
   background-image: url(contact.jpg);
-  background-size: auto;
+  background-size: contain;
+  cursor: default;
 }
 h2 {
   color: #314caf;
@@ -71,6 +72,7 @@ h2 {
   padding: 15px 5px;
   border-radius: 10px;
   transition: .5s ease;
+  color: black;
 }
 .servicelist:hover {
   color: white;
@@ -158,6 +160,7 @@ dl {
   height: 25px;
   width: 200px;
   border-radius: 10px;
+  display: none;
 }
 
 #footer {
@@ -168,7 +171,7 @@ dl {
   top: 950px;
   left: 0px;
   padding: 0px 0px 0px 20px;
-  color: white;
+  color: black;
   background-color: #acb8ed;
 }
 
@@ -248,7 +251,7 @@ dl {
 	</ul>
 
   <div id="calculator">
-    	<!--Start of work: FD-->
+    
 		<h2>Quote Calculator</h2>
 		<label for="hoursAmount">Hours you'd like to work with us for:</label>
 		<input type="text" id="hoursAmount">
@@ -268,9 +271,6 @@ dl {
 		<br>
 		<br>
 		<p id="result"></p>
-
-
-		<!--End of work: FD-->
 
 		<script>
 			/* Start of work: FD */
@@ -301,6 +301,7 @@ dl {
 				resultAmount = rate * hoursInput;
 
 				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+        document.getElementById("result").style.display = "block";
 			}
 			function getValues2(){
 				hoursInput = document.getElementById("hoursAmount").value;
@@ -319,6 +320,7 @@ dl {
 				resultAmount = rate * hoursInput;
 
 				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+        document.getElementById("result").style.display = "block";
 			}
 			function getValues3(){
 				hoursInput = document.getElementById("hoursAmount").value;
@@ -336,6 +338,7 @@ dl {
 				resultAmount = rate * hoursInput;
 
 				document.getElementById("result").innerHTML = "Your total is "+ sign + resultAmount;
+        document.getElementById("result").style.display = "block";
       }
 			/* End of work: FD */
 		</script>
