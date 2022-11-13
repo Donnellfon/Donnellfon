@@ -4,11 +4,15 @@
    <title>Page1</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="index.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
    <style>
 /* Navigation Part CSS */
       #logoarea {
         position: absolute;
-         margin: 0px;
+        margin: 0px;
         float: left;
         top: -30px;
         height: 120px;
@@ -76,7 +80,7 @@
       .hero-image {
         background-image: url("contact.jpg");
         height: 60%;
-        width:100%;
+        width: 100%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -109,7 +113,18 @@
         padding:8% 15% 10% 15%;
         color: black;
         text-align: left;
+        font-size: 18px;
         line-height:1.8em
+      }
+      .button1 {
+        background-color: white; 
+        color: black; 
+        border-radius: 15px;
+        font-size: 16px;
+      }
+      .button1:hover {
+        background-color: #314CAF;
+        color: white;
       }
       .collapsible {
         background-color: white;
@@ -120,6 +135,7 @@
         text-align: center;
         outline: none;
         font-size: 17px;
+        cursor: pointer;
       }
       .active, .collapsible:hover {
         background-color: #314CAF;
@@ -131,32 +147,28 @@
         overflow: hidden;
         background-color: #acb8ed; 
       }
-      .container {
-        border-radius: 10px;
-        background-color: #acb8ed;
-        padding: 10px;
-        position:absolute;
-        bottom: 0px;
-        top: 250px;
-        right: 30px;
-        width: 600px;
-        height: 680px;
-        border-top: 3px solid #acb8ed;
+	    h2{
+      text-align:left!important;
+      color: #314CAF; 
+      font-size:30px;
+      } 
+      table {
+        width:100% ;
+        border:none;
+        border-collapse:collapse;
+      } 
+      tr {
+      height:200px; 
+      background-color: white;
       }
-      .column {
-        float: left;
-        width: 70%;
-        margin-top: 6px;
-        padding: 20px;
-        color: #314CAF;
+      td {
+      text-align:left; 
+      vertical-align:middle; 
+      table-layout:fixed;
       }
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-	  
+      
 /* End Work: Huilin Xiang */
+
       #footer {
         font-size: 0.7em;
         position: absolute;
@@ -186,7 +198,7 @@
     
           <div id="logoarea">
              <a href="page1.html">
-                 <img id="LPU_logo" src="https://webdevproject2210.w3spaces.com/LPU_LOGO.png">
+                 <img id="LPU_logo" src="LPU LOGO.png">
              </a>
           </div>
       </div>
@@ -196,36 +208,32 @@
           <div class="hero-text">
               <h1 style="font-size:50px">Ireland's NO.1 </br>Web Consultancy Firm</h1>
               <br>
-              <button> <a href="page4.html">LET US LPU</a></button>
+              <button class="button button1" onclick="window.location.href='page4.html'">LET US LPU</button>
           </div>
       </div>
 
 
       <div class="firstparagraph">
-          <h1 style="text-align:left; color: #314CAF; font-size:45px">
-          Who We Are</h1></br>
-          <p style="text-align:left; font-size: 18px">
-          As a leading web development firm, LPU specializes in web development consulting services and building web experiences that are high-performing, feature-packed and digitally transformative. We are leading web designers based in Ireland who motivate our clients to turn the ideas into reality. We design the website and web applications that imprint a great experience and unforgettable impressions on our customers. </p>
-          <p style="text-align:left; font-size: 18px">
-          With up to 85% of consumers visiting company's or service provider's website before making a purchase, more and more consumers make decisions based on their online experience: the appearance, usability and accessibility of your website is more important than ever, especially in an increasingly competitive market. Over the past twenty years, as a full service website development firm, LPU have produced numerous acclaimed promotional graphics and engaging websites for a multiple of different types of businesses in many different sectors. Every project gets the same care and attention from the very small brochure type website to the larger fully interactive web application with custom designed Content Management Systems.</p>
+          <h1 style="text-align:left; color: #314CAF; font-size:45px">Who We Are</h1></br>
+          <p> As a leading web development firm, LPU specializes in web development consulting services and building web experiences that are high-performing, feature-packed and digitally transformative. We are leading web designers based in Ireland who motivate our clients to turn the ideas into reality. We design the website and web applications that imprint a great experience and unforgettable impressions on our customers. </p>
+          <p> With up to 85% of consumers visiting company's or service provider's website before making a purchase, more and more consumers make decisions based on their online experience: the appearance, usability and accessibility of your website is more important than ever, especially in an increasingly competitive market. Over the past twenty years, as a full service website development firm, LPU have produced numerous acclaimed promotional graphics and engaging websites for a multiple of different types of businesses in many different sectors. Every project gets the same care and attention from the very small brochure type website to the larger fully interactive web application with custom designed Content Management Systems.</p>
       </div>
 
  	<!-- Two tables, work: HuilinXiang -->
-      <table style="width:100% border:1px solid black;  border-collapse:collapse">
-          <tr style="height:200px; background-color: white">
-
-              <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
-              <td style="width:30%; text-align:center; vertical-align:center; table-layout:fixed; padding-right:20px">
+      <table>
+          <tr>
+              <td style="width:20%"></td>
+              <td style="width:30%; padding-right:20px">
                   <img src="value.jpg" style="width:100%"></td>
               <td style="width:30%; padding-left:4%">
-                  <h2 style="text-align:left!important; color: #314CAF; font-size:30px">Our Values</h2></br>
-                  <p style="font-size:17px; color:black; text-align:left; line-height:1.7em">At LPU our culture is one of our most valuable assets, it is part of our DNA. Our culture and values have guided our firm and the way we work since 1941.</br></br>
+                  <h2>Our Values</h2></br>
+                  <p>At LPU our culture is one of our most valuable assets, it is part of our DNA. Our culture and values have guided our firm and the way we work since 2002.</br></br>
                   Our values have helped create a dynamic company culture, built on lasting, fruitful relationships within the firm and with our clients resulting in great, impactful work.</p></td>
-              <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
+              <td style="width:20%"></td>
           </tr>
       </table>
 
-      <button type="button" class="collapsible">See More</button>
+      <button type="button" class="collapsible">Click to See More</button>
           <div class="content">
               <ul style="list-style-type:square;">
                   <li>Clarity</li>
@@ -240,27 +248,27 @@
            </div>
 
 
+<table>
+   <tr>
 
-<table style="width:100% border:1px solid black;  border-collapse:collapse">
-   <tr style="height:200px; background-color: white">
-
-      <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
+      <td style="width:20%"></td>
     
       <td style="width:30%; padding-right:20px">
-         <h2 style="text-align:left!important; color: #314CAF; font-size:30px">Our Teams</h2>
-         <p style="font-size:17px; color:black; text-align:left; line-height:1.7em">LPU is led globally by our managing partner; our elected board of directors, known as the Shareholders Council; a global leadership team known as the Acceleration Team; and the leaders of our offices and practices.</p>
+         <h2>Our Teams</h2>
+         <p>LPU is a place where innovators come to learn, discover and grow. We are made up of bold and creative thinkers that come from every walk of life.</p>
+         <p>LPU is led globally by our managing partner; our elected board of directors, known as the Shareholders Council; a global leadership team known as the Acceleration Team; and the leaders of our offices and practices.</p>
       </td>
 
-      <td style="width:30%; text-align:center; vertical-align:middle; table-layout:fixed; padding-left:4%">
+      <td style="width:30%; padding-left:4%">
          <img src="teams.jpg" style="width:100%">
       </td>
     
-     <td style="width:20%; text-align:center; vertical-align:middle; table-layout:fixed"></td>
+     <td style="width:20%"></td>
    </tr>
 </table>
 
 
-<button type="button" class="collapsible">See More</button>
+<button type="button" class="collapsible">Click to See More</button>
 <div class="content">
   <ol>
   <li>Shareholders Council</li>
@@ -295,13 +303,9 @@ for (i = 0; i < coll.length; i++) {
  	<!-- End Work: HuilinXiang -->
 
      <div id="footer">
-        <div id="contactdetails">
-            <p>email@email</p>
-            <p>Phone Number</p>
-        </div>
-        <div id="socials">
-        </div>
-    </div>
+           <p>info@lpuservices.ie</p>
+            <p>+353 (083) 877 3751</p>
+     </div>
 
 
 </body>
